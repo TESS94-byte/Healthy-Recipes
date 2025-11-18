@@ -1,70 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Healthy Recipes</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Recipes</title>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <h1 class="logo">Healthy Recipes 🍎</h1>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <style>
+    /* ------------------------------
+        GLOBAL STYLES + ACCESSIBILITY
+    ------------------------------ */
+    :root {
+      --green: #4caf50;
+      --dark: #2d2d2d;
+      --light: #f9f9f9;
+      --focus-color: #1e88e5;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* Focus outline for keyboard users */
+    a:focus, button:focus {
+      outline: 3px dashed var(--focus-color);
+      outline-offset: 3px;
+    }
+
+    /* ------------------------------
+        HEADER & NAVIGATION
+    ------------------------------ */
+    header {
+      background: white;
+      padding: 15px 20px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    /* ------------------------------
+        HERO SECTION
+    ------------------------------ */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      color: var(--green);
+      font-size: 42px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .hero img {
+      width: 320px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+
+    /* Button-like link */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--green);
+      color: white;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #43a047;
+    }
+
+    /* ------------------------------
+        FOOTER
+    ------------------------------ */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* ------------------------------
+        RESPONSIVE DESIGN
+    ------------------------------ */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SKIP TO CONTENT -->
+  <a href="#main" style="position:absolute;left:-999px;top:-999px;" 
+     class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
 
     <section class="hero">
-      <h2>Eat Better. Live Better.</h2>
-      <p>
-        Explore nutritious, easy-to-make recipes designed to boost your
-        lifestyle.
-      </p>
-      <a href="recipes.html" class="btn">View Recipes</a>
+      <h1>Welcome to Healthy Recipes 🍎</h1>
+      <p>Your source for simple, delicious, and nutritious meals you can make at home.</p>
+
+      <img 
+        src="https://www.eatright.org/-/media/eatrightimages/health/wellness/healthyaging/healthymeals_712137256.jpg" 
+        alt="A bowl of fresh vegetables and grains arranged in a healthy meal." />
+
+      <br />
+
+      <a href="#recipes" class="btn">View Recipes</a>
     </section>
 
-    <section class="featured">
-      <h2>Featured Recipes</h2>
+  </main>
 
-      <div class="card-container">
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
-            alt="Colorful bowl with vegetables and grains"
-          />
-          <h3>Rainbow Veggie Bowl</h3>
-          <p>A vibrant bowl packed with fiber, flavor, and fresh veggies.</p>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Healthy Recipes — Made with accessibility in mind.</p>
+  </footer>
 
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061"
-            alt="Avocado toast with herbs"
-          />
-          <h3>Avocado Toast</h3>
-          <p>Simple, healthy, and rich in good fats — perfect breakfast.</p>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1497534446932-c925b458314e"
-            alt="Fruit and yogurt parfait"
-          />
-          <h3>Fruit Yogurt Parfait</h3>
-          <p>Refreshing, sweet, and protein-packed snack or breakfast.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2025 Healthy Recipes Website · All rights reserved</p>
-    </footer>
-  </body>
+</body>
 </html>
 
 
