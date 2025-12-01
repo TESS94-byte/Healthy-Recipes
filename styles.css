@@ -126,3 +126,64 @@ footer {
     font-size: 2rem;
   }
 }
+/* styles.css - shared across all pages */
+:root {
+  --accent: #2e8b57;
+  --accent-hover: #ff6347;
+  --bg: #f9f9f9;
+  --text: #333;
+  --max-width: 1000px;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: white;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+.container { max-width: var(--max-width); width:100%; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: var(--bg);
+}
+.header-row {
+  width: 100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 10px;
+}
+header img { width:120px; height:auto; }
+header h1 { margin: 0; color: var(--accent); }
+header p.slogan { margin: 4px 0 0 0; font-style: italic; color:#555; }
+
+/* nav */
+nav ul { list-style:none; display:flex; gap:18px; padding:0; margin:0; }
+nav a { text-decoration:none; color:var(--accent); font-weight:600; }
+nav a:hover { color: var(--accent-hover); }
+
+/* search form (small) */
+.search-form { display:flex; gap:6px; align-items:center; }
+.search-form input { padding:6px; border-radius:4px; border:1px solid #ccc; }
+
+/* page content */
+main { padding: 24px 0; }
+section { margin-bottom: 20px; }
+
+/* form */
+input[type="text"], input[type="email"], textarea {
+  width:100%; padding:8px; margin:6px 0 12px 0; border:1px solid #ccc; border-radius:4px;
+}
+
+/* simple footer */
+footer { text-align:center; padding:18px 0; color:#777; border-top:1px solid #eee; margin-top:30px; }
+
