@@ -3,69 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Healthy Recipes</title>
+  <title>Healthy Recipes - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-  <!-- SKIP TO CONTENT -->
-  <a href="#main" style="position:absolute;left:-999px;top:-999px;" 
-     class="skip-link">Skip to main content</a>
-
-  <!-- header  -->
-<header class="container">
-  <div class="header-row">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img width=120px src="FullLogo.png" alt="Healthy Recipes Logo">
-      <div>
-        <h1>Healthy Recipes</h1>
-        <p class="slogan">Eat Well, Live Well</p>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <img src="FullLogo.png" alt="Healthy Recipes Logo" class="logo-img" />
+      <h1 class="logo">Healthy Recipes 🍎</h1>
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div style="display:flex;align-items:center;gap:18px">
-      <nav aria-label="Main navigation">
-        <ul>
-          <li style="display:inline"><a href="index.html">Home</a></li>
-          <li style="display:inline"><a href="recipes.html">Recipes</a></li>
-          <li style="display:inline"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- small search form  -->
-      <form class="search-form" action="#" method="get" onsubmit="event.preventDefault(); alert('Search will be added later');">
-        <input type="text" name="search" placeholder="Search recipes...">
-        <button type="submit">Go</button>
-      </form>
-    </div>
-  </div>
-</header>
-
-
-  <!-- MAIN CONTENT -->
-  <main id="main">
-
-    <section class="hero">
-      <h1>Welcome to Healthy Recipes 🍎</h1>
-      <p>Your source for simple, delicious, and nutritious meals you can make at home.</p>
-
-      
-
-      <br />
-
-      <a href="#recipes" class="btn">View Recipes</a>
+  <main>
+    <section class="hero" aria-label="Homepage Hero Section">
+      <h2>Eat Well. Live Well.</h2>
+      <p>Explore nutritious, easy-to-make recipes designed to boost your lifestyle.</p>
+      <a href="recipes.html" class="btn">View Recipes</a>
     </section>
 
+    <section class="featured" aria-label="Featured Recipes">
+      <h2>Featured Recipes</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Colorful bowl with fresh vegetables and grains">
+          <h3>Rainbow Veggie Bowl</h3>
+          <p>A vibrant bowl packed with fiber, flavor, and fresh veggies.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Avocado toast on a plate with herbs">
+          <h3>Avocado Toast</h3>
+          <p>Simple, healthy, and rich in good fats — perfect breakfast.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e" alt="Glass jar with fruit and yogurt parfait">
+          <h3>Fruit Yogurt Parfait</h3>
+          <p>Refreshing, sweet, and protein-packed snack or breakfast.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Healthy Recipes — Made with accessibility in mind.</p>
+    <p>© 2025 Healthy Recipes Website · All rights reserved</p>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
 </body>
 </html>
+
 
 
 
