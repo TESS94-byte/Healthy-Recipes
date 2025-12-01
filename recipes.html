@@ -7,14 +7,35 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<!-- header (paste at top of body on every page) -->
+<header class="container">
+  <div class="header-row">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="images/FullLogo.png" alt="Healthy Recipes Logo">
+      <div>
+        <h1>Healthy Recipes</h1>
+        <p class="slogan">Eat Well, Live Well</p>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:18px">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li style="display:inline"><a href="index.html">Home</a></li>
+          <li style="display:inline"><a href="recipes.html">Recipes</a></li>
+          <li style="display:inline"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- small search form (optional functionality later) -->
+      <form class="search-form" action="#" method="get" onsubmit="event.preventDefault(); alert('Search will be added later');">
+        <input type="text" name="search" placeholder="Search recipes...">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+  </div>
 </header>
+
 
 <h1>Recipes</h1>
 <p>This page is under construction.</p>
