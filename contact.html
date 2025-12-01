@@ -1,9 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Healthy Recipes - Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <!-- header (paste at top of body on every page) -->
 <header class="container">
   <div class="header-row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="images/FullLogo.png" alt="Healthy Recipes Logo">
+      <img src="FullLogo.png" alt="Healthy Recipes Logo">
       <div>
         <h1>Healthy Recipes</h1>
         <p class="slogan">Eat Well, Live Well</p>
@@ -27,3 +34,26 @@
     </div>
   </div>
 </header>
+  <main class="container">
+    <h2 id="contact">Contact</h2>
+    <p>If you have recipe suggestions or questions, leave a message below.</p>
+
+    <!-- BEGINNING OF FORM -->
+    <form id="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <!-- END FORM -->
+  </main>
+
+  <footer class="container"><p>© Healthy Recipes</p></footer>
+</body>
+</html>
