@@ -8,34 +8,29 @@
 <body>
 
 <!-- header -->
-<header class="container">
-  <div class="header-row">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img width=120px src="FullLogo.png" alt="Healthy Recipes Logo">
-      <div>
-        <h1>Healthy Recipes</h1>
-        <p class="slogan">Eat Well, Live Well</p>
-      </div>
-    </div>
-
-    <div style="display:flex;align-items:center;gap:18px">
-      <nav aria-label="Main navigation">
-        <ul>
-          <li style="display:inline"><a href="index.html">Home</a></li>
-          <li style="display:inline"><a href="recipes.html">Recipes</a></li>
-          <li style="display:inline"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- small search form  -->
-      <form class="search-form" action="#" method="get" onsubmit="event.preventDefault(); alert('Search will be added later');">
-        <input type="text" name="search" placeholder="Search recipes...">
-        <button type="submit">Go</button>
-      </form>
+<head<header class="navbar">
+  <div style="display:flex;align-items:center;gap:15px">
+    <img src="FullLogo.png" alt="Healthy Recipes Logo" width="120">
+    <div>
+      <h1>Healthy Recipes</h1>
+      <p class="slogan">Eat Well, Live Well</p>
     </div>
   </div>
-</header>
 
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <form class="search-form" action="#" method="get" 
+        onsubmit="event.preventDefault(); alert('Search will be added later');">
+    <input type="text" name="search" placeholder="Search recipes...">
+    <button type="submit">Go</button>
+  </form>
+</header>
 
 <h1>Recipes</h1>
 <p>This page is under construction.</p>
