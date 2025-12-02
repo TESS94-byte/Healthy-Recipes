@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Recipes - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Recipes - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <!-- Logo -->
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Healthy Recipes Logo" class="logo-img" />
+        <span class="logo-text">Healthy Recipes 🍎</span>
+      </a>
 
-<header>
-    <div class="logo-container">
-        <img src="FullLogo.png" alt="Healthy Recipes Logo">
-        <h1>Healthy Recipes</h1>
-    </div>
+      <!-- Hamburger menu -->
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="contact.html">Contact</a>
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <h2>Eat Healthy, Live Happier</h2>
-    <p>Discover delicious and nutritious recipes for a healthier lifestyle.</p>
-</section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Homepage Hero Section">
+      <h2>Eat Better. Live Better.</h2>
+      <p>Explore nutritious, easy-to-make recipes designed to boost your lifestyle.</p>
+      <a href="recipes.html" class="btn">View Recipes</a>
+    </section>
 
-<section class="content">
-    <h2>Welcome!</h2>
-    <p>Explore our collection of healthy recipes made with fresh ingredients and balanced nutrition. Whether you're looking for easy meals, vegan options, or high-protein dishes, we’ve got you covered.</p>
-</section>
+    <!-- Featured Recipes -->
+    <section class="featured" aria-label="Featured Recipes">
+      <h2>Featured Recipes</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Colorful bowl with vegetables and grains">
+          <h3>Rainbow Veggie Bowl</h3>
+          <p>A vibrant bowl packed with fiber, flavor, and fresh veggies.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Avocado toast with herbs">
+          <h3>Avocado Toast</h3>
+          <p>Simple, healthy, and rich in good fats — perfect breakfast.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e" alt="Fruit and yogurt parfait">
+          <h3>Fruit Yogurt Parfait</h3>
+          <p>Refreshing, sweet, and protein-packed snack or breakfast.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-    <p>© 2025 Healthy Recipes. All Rights Reserved.</p>
-</footer>
+  <footer>
+    <p>© 2025 Healthy Recipes Website · All rights reserved</p>
+  </footer>
 
+  <!-- Hamburger menu script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
 </body>
 </html>
 
