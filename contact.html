@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Recipes - Contact</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Recipes - Contact</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
     <div class="logo-container">
-        <img src="FullLogo.png" alt="Healthy Recipes Logo">
-        <h1>Healthy Recipes</h1>
+      <img src="FullLogo.png" alt="Healthy Recipes Logo" class="logo">
     </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="recipes.html">Recipes</a>
-        <a href="contact.html" class="active">Contact</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="content">
-    <h2>Contact Us</h2>
+  <main id="main">
 
-    <form class="contact-form">
+    <section class="hero">
+      <h1>Contact Us ✉️</h1>
+      <p>We’d love to hear from you. Send us your questions or suggestions!</p>
+    </section>
+
+    <section style="padding: 40px; max-width: 600px; margin: auto;">
+      <form class="contact-form">
+
         <label>Name</label>
-        <input type="text" placeholder="Your Name" required>
+        <input type="text" required>
 
         <label>Email</label>
-        <input type="email" placeholder="Your Email" required>
+        <input type="email" required>
 
         <label>Message</label>
-        <textarea placeholder="Your Message" required></textarea>
+        <textarea required rows="5"></textarea>
 
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+        <button type="submit" class="btn">Send Message</button>
 
-<footer>
-    <p>© 2025 Healthy Recipes. All Rights Reserved.</p>
-</footer>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Healthy Recipes</p>
+  </footer>
 
 </body>
 </html>
