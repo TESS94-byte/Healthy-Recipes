@@ -1,354 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Healthy Recipes</title>
+  <title>Healthy Recipes - Home</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* ----------------------------------------
-       GLOBAL STYLES + ACCESSIBILITY
-    ---------------------------------------- */
-    :root {
-      --green: #4caf50;
-      --dark: #2d2d2d;
-      --light: #f9f9f9;
-      --focus-color: #1e88e5;
-      --max-width: 1100px;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-
-    /* Smooth fade-in animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Better skip link */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 20px;
-      background: var(--green);
-      color: white;
-      padding: 10px;
-      border-radius: 6px;
-      z-index: 1000;
-    }
-
-    .skip-link:focus {
-      top: 20px;
-    }
-
-    /* ----------------------------------------
-       HEADER
-    ---------------------------------------- */
-    header {
-      background: white;
-      padding: 15px 25px;
-      border-bottom: 2px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: bold;
-      font-size: 18px;
-      position: relative;
-      padding-bottom: 5px;
-    }
-
-    /* Advanced hover underline */
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 3px;
-      background: var(--green);
-      left: 0;
-      bottom: 0;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* ----------------------------------------
-       HERO SECTION
-    ---------------------------------------- */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      color: var(--green);
-      font-size: 45px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .hero img {
-      width: 350px;
-      margin-top: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-
-    .hero img:hover {
-      transform: scale(1.04);
-    }
-
-    /* Button-like link */
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: var(--green);
-      color: white;
-      border-radius: 8px;
-      margin-top: 25px;
-      font-size: 18px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #43a047;
-      transform: translateY(-3px);
-    }
-
-    /* ----------------------------------------
-       RECIPES SECTION
-    ---------------------------------------- */
-    #recipes {
-      padding: 60px 20px;
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    #recipes h2 {
-      text-align: center;
-      font-size: 36px;
-      color: var(--green);
-      margin-bottom: 40px;
-    }
-
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .recipe-card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .recipe-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .recipe-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    /* ----------------------------------------
-       CONTACT SECTION
-    ---------------------------------------- */
-    #contact {
-      padding: 60px 20px;
-      background: #fff;
-      max-width: var(--max-width);
-      margin: auto;
-      border-radius: 12px;
-    }
-
-    #contact h2 {
-      text-align: center;
-      font-size: 36px;
-      color: var(--green);
-      margin-bottom: 30px;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    form input, form textarea {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      padding: 12px;
-      background: var(--green);
-      color: white;
-      border: none;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #43a047;
-    }
-
-    /* ----------------------------------------
-       FOOTER
-    ---------------------------------------- */
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #eee;
-      margin-top: 50px;
-      font-size: 14px;
-    }
-
-    /* ----------------------------------------
-       RESPONSIVE DESIGN
-    ---------------------------------------- */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .hero img {
-        width: 250px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- SKIP TO CONTENT -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- HEADER -->
   <header>
+    <div class="logo-container">
+      <img src="FullLogo.png" alt="Healthy Recipes Logo" class="logo">
+    </div>
+
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#main">Home</a></li>
-        <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main id="main">
-
-    <!-- HERO -->
-    <section class="hero fade-in">
+    <section class="hero">
       <h1>Welcome to Healthy Recipes 🍎</h1>
       <p>Your source for simple, delicious, and nutritious meals you can make at home.</p>
 
-      <br />
+      
 
-      <a href="#recipes" class="btn">View Recipes</a>
+      <br><br>
+
+      <a href="recipes.html" class="btn">View Recipes</a>
     </section>
-
-    <!-- RECIPES SECTION -->
-    <section id="recipes" class="fade-in">
-      <h2>Featured Recipes</h2>
-
-      <div class="recipe-grid">
-        <div class="recipe-card">
-          
-          <h3>Avocado Salad</h3>
-          <p>Fresh, crunchy, and packed with nutrients.</p>
-        </div>
-
-        <div class="recipe-card">
-          
-          <h3>Quinoa Power Bowl</h3>
-          <p>High-protein, colorful, and delicious.</p>
-        </div>
-
-        <div class="recipe-card">
-          
-          <h3>Berry Antioxidant Smoothie</h3>
-          <p>A refreshing boost for your day.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="fade-in">
-      <h2>Contact Us</h2>
-
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required rows="5"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Healthy Recipes — Built with accessibility & modern design.</p>
+    <p>© 2025 Healthy Recipes — Made with accessibility in mind.</p>
   </footer>
 
 </body>
 </html>
-
-
