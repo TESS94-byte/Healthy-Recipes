@@ -99,10 +99,27 @@ nav a.active {
   margin-top: 20px;
   font-size: 18px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: #43a047;
+}
+
+/* SECTIONS ADDED FROM HTML FILES */
+
+/* Recipes page */
+.recipes-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Contact page */
+.contact-section {
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
 }
 
 /* CONTACT FORM + CARDS */
@@ -112,6 +129,8 @@ nav a.active {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #aaa;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .card {
