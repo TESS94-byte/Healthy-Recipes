@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthy Recipes - Recipes</title>
+  <meta name="description" content="Browse our collection of healthy and easy-to-make recipes, from salads to smoothies.">
+  <meta name="keywords" content="healthy recipes, salads, smoothies, nutritious meals">
+  <meta name="author" content="Your Name">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Healthy Recipes - Recipes">
+  <meta property="og:description" content="Browse our collection of healthy and easy-to-make recipes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/recipes.html">
+  <meta property="og:image" content="image/logo.jpg">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 
 <body>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-  <header>
+<header>
+  <div class="header-container">
+    <div class="logo-area">
+      <img src="image/logo.jpg" alt="Healthy Recipes logo" class="logo">
+      <span class="site-title">Healthy Recipes</span>
+    </div>
+
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html" class="active">Recipes</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="community.html">Community</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
+<main id="main" class="recipes-section">
+  <h1>Our Recipes</h1>
+  <p>Explore our collection of healthy and easy-to-make meals, perfect for any time of day</p>
+  <div class="recipes-grid">
 
-    <section class="hero">
-      <h1>Recipes 🍽️</h1>
-      <p>Explore our collection of healthy and delicious recipes.</p>
-    </section>
+    <div class="card">
+      <img src="image/sld.webp" alt="Fresh avocado salad">
+      <h3>Avocado Salad</h3>
+      <p>Fresh, healthy, and easy to make.</p>
+      <a href="avocado-salad.html" class="btn">View Recipe</a>
+    </div>
 
-    <section class="recipes-section">
-      <div class="recipe-cards">
+    <div class="card">
+      <img src="image/qn.webp" alt="Quinoa bowl with vegetables">
+      <h3>Quinoa Bowl</h3>
+      <p>High-protein and filling.</p>
+      <a href="quinoa-bowl.html" class="btn">View Recipe</a>
+    </div>
 
-        <div class="card">
-          <h3>Avocado Salad</h3>
-          <p>Fresh, nutrient-packed and easy to make.</p>
-        </div>
+    <div class="card">
+      <img src="image/berry.webp" alt="Berry smoothie in a glass">
+      <h3>Berry Smoothie</h3>
+      <p>Perfect for breakfast.</p>
+      <a href="berry-smoothie.html" class="btn">View Recipe</a>
+    </div>
 
-        <div class="card">
-          <h3>Quinoa Bowl</h3>
-          <p>High-protein and full of flavor.</p>
-        </div>
+  </div>
+</main>
 
-        <div class="card">
-          <h3>Berry Smoothie</h3>
-          <p>Perfect antioxidant-rich breakfast.</p>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Healthy Recipes</p>
-  </footer>
+<footer>
+  <p>© 2025 Healthy Recipes</p>
+</footer>
 
 </body>
 </html>

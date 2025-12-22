@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthy Recipes - Home</title>
+  <meta name="description" content="Welcome to Healthy Recipes! Discover easy, nutritious meals and tips for a healthier lifestyle.">
+  <meta name="keywords" content="healthy recipes, meals, nutrition, cooking">
+  <meta name="author" content="Your Name">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Healthy Recipes - Home">
+  <meta property="og:description" content="Discover easy, nutritious meals and tips for a healthier lifestyle.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/index.html">
+  <meta property="og:image" content="image/logo.jpg">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -13,26 +23,30 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <header>
-   
+    <div class="header-container">
 
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      <div class="logo-area">
+        <img src="image/logo.jpg" alt="Healthy Recipes logo" class="logo">
+        <span class="site-title">Healthy Recipes</span>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
   <main id="main">
     <section class="hero">
       <h1>Welcome to Healthy Recipes 🍎</h1>
       <p>Your source for simple, delicious, and nutritious meals you can make at home.</p>
-
-      
-
-      <br><br>
-
       <a href="recipes.html" class="btn">View Recipes</a>
     </section>
   </main>
@@ -43,6 +57,7 @@
 
 </body>
 </html>
+
 
 
 
